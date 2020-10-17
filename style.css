@@ -50,7 +50,7 @@ footer{
     main{
         flex: 2;
         order: 2;
-        min-height: 80vh; /*this is so the main w/o content,will still have default height to */
+        height: 80vh; /*this is so the main w/o content,will still have default height to */
     }
 
     /*we have the left and right side bar as order 1 b/c we want these to come before the main area for desktop users. default val for oder is 0*/
