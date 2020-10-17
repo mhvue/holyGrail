@@ -1,0 +1,69 @@
+/*RESET*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*COLORS and FONTS*/
+body{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+
+header{
+    background: orangered;
+}
+
+main{
+    background: darkslateblue;
+}
+
+footer{
+    background:deeppink;
+}
+
+.left-sidebar{
+    background: dodgerblue;
+}
+.right-sidebar{
+    background: forestgreen;
+}
+
+/*set below as we build for moblie first. with flex-direction column, it will have columns layout on mobile*/
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*DESKTOP*/
+@media all and (min-width: 768px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    header, footer{
+        width: 100%;
+    }
+    main{
+        flex: 2;
+        order: 2;
+        min-height: 80vh; /*this is so the main w/o content,will still have default height to */
+    }
+
+    /*we have the left and right side bar as order 1 b/c we want these to come before the main area for desktop users. default val for oder is 0*/
+    .left-sidebar{
+        order:1;
+        flex: 1;
+    }
+    .right-sidebar{
+        flex:1;
+        order:3;
+    }
+    footer{
+        order:4;
+    }
+
+}
